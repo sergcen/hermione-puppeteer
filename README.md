@@ -14,3 +14,15 @@ Example `.hermione.conf`:
     }
 }
 ```
+
+Usage:
+```js
+
+describe('Example', () => {
+    it('open page from puppeteer', async function () {
+        const puppeteer = await this.browser.puppeteer();
+        const page = await puppeteer.newPage();
+        await page.goto('https://.yandex.ru');
+    });
+});
+```

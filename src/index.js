@@ -10,7 +10,7 @@ module.exports = (hermione, opts) => {
         return;
     }
 
-    hermione.on(hermione.events.NEW_BROWSER, function(browser, { browserId }) {
+    hermione.on(hermione.events.NEW_BROWSER, function (browser, { browserId }) {
         const sessions = {};
 
         browser.addCommand('puppeteer', async function () {
@@ -23,9 +23,7 @@ module.exports = (hermione, opts) => {
                     sessionId,
                     gridUrl: hermione.config.forBrowser(browserId).gridUrl,
                 });
-                debug(
-                    `connecting devtools via endpoint ${browserWSEndpoint}`
-                );
+                debug(`connecting devtools via endpoint ${browserWSEndpoint}`);
 
                 puppeteerConnection = await Puppeteer.create({
                     browserWSEndpoint,
@@ -35,6 +33,6 @@ module.exports = (hermione, opts) => {
             }
 
             return puppeteerConnection;
-        })
+        });
     });
 };

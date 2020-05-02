@@ -49,8 +49,9 @@ const getParser = () => {
                     }
                 },
             }),
-        })
-    , {});
+        }),
+        {}
+    );
 };
 
 module.exports = (options) => {
