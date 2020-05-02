@@ -1,0 +1,33 @@
+{
+  "name": "hermione-puppeteer",
+  "version": "1.0.1",
+  "description": "Plugin to hide scrollbars",
+  "scripts": {
+    "lint": "prettier ./src --write",
+    "test": "exit 0",
+    "prepublishOnly": "npm run lint"
+  },
+  "files": [
+    "src"
+  ],
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "hermione",
+    "plugin",
+    "puppeteer"
+  ],
+  "author": "Sergei Savelev <sergcen@mail.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "2.0.5"
+  },
+  "dependencies": {
+    "debug": "4.1.1",
+    "gemini-configparser": "1.0.0",
+    "puppeteer-core": "3.0.1"
+  }
+}
